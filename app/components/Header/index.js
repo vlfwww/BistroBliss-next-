@@ -1,5 +1,6 @@
 import style from "./style.module.css";
 import Image from "next/image";
+import Link from 'next/link'
 import phone from "../../public/phone.png";
 import mail from "../../public/mail.png";
 import tw from "../../public/logo-twitter.png";
@@ -60,9 +61,9 @@ function Header() {
             <p>Bistro Bliss</p>
         </div>
         <div className={style.center}>
-            <p>Home</p>
-            <p>About</p>
-            <p>Menu</p>
+            <Link href='/'><p>Home</p></Link>
+            <Link href='/about'><p>About</p></Link>
+            <Link href='/menu'><p>Menu</p></Link>
         </div>
         <div className={style.right}>
             <p>Book A Table</p>

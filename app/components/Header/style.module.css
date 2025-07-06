@@ -61,15 +61,18 @@
     & .center{
         display: flex;
         gap:14px;
-        color: rgba(44, 47, 36, 1);
         align-items: center;
-        & p {
+       & a{
+         text-decoration: none;
+         color: rgba(44, 47, 36, 1);
+         & p {
             padding: 4px 16px;
         }
         & p:hover{
             background-color: rgba(219, 223, 208, 1);
             border-radius: 100px;
         }
+       }
     }
     & .right{
         max-width: 147px;

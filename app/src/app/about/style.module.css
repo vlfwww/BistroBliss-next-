@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+.firstSection {
+  background-color: rgba(249, 249, 247, 1);
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  & .left {
+    max-width: 649px;
+    & img {
+      width: 599px;
+      height: 566px;
+      border-radius: 12px;
+    }
+    & .info {
+      position: relative;
+      left: 240px;
+      bottom: 150px;
+      max-width: 411px;
+      border-radius: 12px;
+      background-color: rgba(71, 71, 71, 1);
+      padding: 30px;
+      & .title {
+        font: 700 24px "DM Sans";
+        font-style: bold;
+        color: rgba(255, 255, 255, 1);
+        margin-bottom: 45px;
+      }
+      & .part {
+        display: flex;
+        gap: 5px;
+        & img {
+          width: 24px;
+          height: 24px;
+        }
+        & p{
+            color: rgba(249, 249, 247, 1);
+            font:400 16px "DM Sans";
+            max-width: 311px;
+        }
+        & .mail{
+            margin: 25px 0;
+        }
+      }
+    }
+  }
+  & .right{
+    max-width: 557px;
+    margin-top: 130px;
+    & .main{
+        font:500 55px "Playfair Display";
+        color: rgba(44, 47, 36, 1);
+        max-width: 527px;
+    }
+    & .dopInf{
+        font:500 18px "DM Sans";
+        color: rgba(44, 47, 36, 1);
+        margin: 24px 0;
+    }
+    & .secondDopInf{
+        font:400 16px "DM Sans";
+        color: rgba(65, 69, 54, 1);
+    }
+  }
+}
+.secondSection{
+    display: flex;
+    justify-content: center;
+    gap:131px;
+    margin: 138px auto;
+    background-color: rgba(255, 255, 255, 1);
+    & .left{
+        max-width: 580px;
+        & .title{
+            font:500 55px "Playfair Display";
+            color: rgba(44, 47, 36, 1);
+        }
+        & .addition{
+            font:400 16px "DM Sans";
+            color: rgba(65, 69, 54, 1);
+            margin-top: 20px;
+        }
+        & .wrapper{
+            display: grid;
+            margin-top: 60px;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows:  repeat(2,1fr);
+            gap:24px;
+            & .block{
+                border: 1px solid rgba(219, 223, 208, 1);
+                background-color: rgba(255, 255, 255, 1);
+                border-radius: 8px;
+                padding: 35px 105px;
+                text-align: center;
+                & .main{
+                    font:500 55px "Playfair Display";
+                    color: rgba(44, 47, 36, 1);
+                }
+                & .dop{
+                    font:500 18px "DM Sans";
+                    margin-top: 15px;
+                    color: rgba(65, 69, 54, 1);
+                }
+            }
+        }
+    }
+    & .right{
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        & img{
+            border-radius: 12px;
+        }
+    }
+}

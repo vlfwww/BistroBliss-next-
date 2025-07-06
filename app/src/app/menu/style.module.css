@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.wrapper{
+    margin: 97px auto;
+    text-align: center;
+    & .text{
+        margin: 0 auto 33px;
+        max-width: 557px;
+        & .title{
+        font:400 100px 'Playfair Display';
+        color: rgba(44, 47, 36, 1);
+        }
+        & .dop{
+            font:400 18px'DM Sans';
+            color: rgba(73, 84, 96, 1);
+            margin-top: 20px;
+        }
+    }
+    & .category{
+        display: flex;
+        justify-content: center;
+        gap:16px;
+        & .categoryButton{
+        border: 1px solid rgba(64, 63, 61, 1);
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 100px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        gap:5px;
+        & p:first-of-type{
+            background-color: rgba(64, 63, 61, 1);
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+        }
+        & p:last-of-type{
+            color: rgba(64, 63, 61, 1);
+            font:600 16px 'Inter';
+            font-style:bold;
+        }
+    }
+    & .categoryButton:hover{
+        background-color: rgba(64, 63, 61, 1);
+        & p:first-of-type{
+            background-color: rgba(255, 255, 255, 1);
+        }
+        & p:last-of-type{
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+    }
+    & .menu{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 80px auto;
+        justify-content: center;
+        gap:24px;
+    }
+}
