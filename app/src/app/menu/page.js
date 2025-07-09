@@ -1,6 +1,7 @@
 import style from "./style.module.css";
 import MenuItem from "../../../components/MenuItem";
 import products from "../Array";
+import Link from 'next/link';
 export default function Menu() {
   return (
     <div className={style.wrapper}>
@@ -32,13 +33,14 @@ export default function Menu() {
       <div className={style.menu}>
         {Array.isArray(products) ? (
           products.map((el) => (
-            <MenuItem
-              key={el.name} 
-              name={el.name}
-              img={el.img}
-              price={el.price}
-              description={el.description}
-            />
+             <Link key={el.id} href={`/menuCard/${el.id}`}>
+                <MenuItem className={style.item}
+                  name={el.name}
+                  img={el.img}
+                  price={el.price}
+                  description={el.description}
+                />
+            </Link>
           ))
         ) : (
           <p>Нет доступных продуктов.</p>

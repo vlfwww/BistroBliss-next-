@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+.wrapper {
+  background-color: rgba(249, 249, 247, 1);
+  padding: 88px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & .card {
+    display: flex;
+    justify-content: center;
+    max-width: 863px;
+    width: 100%;
+    gap: 95px;
+    & .left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    & .right {
+      flex: 2;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      & h1 {
+        font: 600 55px "Playfair Display";
+        color: rgba(44, 47, 36, 1);
+      }
+      & .longDescription {
+        font: 400 16px "DM Sans";
+        color: rgba(64, 63, 61, 1);
+        margin: 12px 0 20px;
+      }
+      & .size {
+        color: rgba(44, 47, 36, 1);
+        font: 400 16px "DM Sans";
+      }
+      & .sizeOptions {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        & .sizeButton {
+          padding: 8px 12px;
+          gap: 8px;
+          border-radius: 100px;
+          background-color: transparent;
+          border: 1px solid rgba(64, 63, 61, 1);
+          color: #333;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          & .letter {
+            width: 30px;
+            height: 30px;
+            border-radius: 100px;
+            background-color: rgba(64, 63, 61, 1);
+            color: rgba(255, 255, 255, 1);
+            font: 700 16px "DM Sans";
+            font-style: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          & .quantity {
+            color: rgba(64, 63, 61, 1);
+            font: 700 16px "DM Sans";
+            font-style: bold;
+          }
+        }
+        & .sizeButton:hover {
+          background-color: rgba(64, 63, 61, 1);
+          & .letter {
+            background-color: rgba(255, 255, 255, 1);
+            color: rgba(64, 63, 61, 1);
+          }
+          & .quantity {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+    }
+  }
+  & .total {
+    margin-top: 20px;
+    max-width: 862px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    & .top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 20px;
+      & p {
+        font: 700 24px "DM Sans";
+        font-style: bold;
+      }
+    }
+    & .bottom {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid rgba(64, 63, 61, 1);
+      padding-top: 20px;
+      gap:8px;
+      & p {
+        font: 700 10px "DM Sans";
+        font-style: bold;
+        color: rgba(64, 63, 61, 1);
+      }
+    }
+    & button{
+        border-radius: 100px;
+        width: 100%;
+        margin-top: 32px;
+        border: 1px solid rgba(64, 63, 61, 1);
+        font: 700 16px "DM Sans";
+        font-style: bold;
+        color: rgba(64, 63, 61, 1);
+        padding: 10px 0;
+        background-color: transparent;
+    }
+  }
+}
