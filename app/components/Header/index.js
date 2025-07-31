@@ -66,7 +66,7 @@ function Header() {
             <Link href='/menu'><p>Menu</p></Link>
         </div>
         <div className={style.right}>
-            <p>Busket</p>
+            <Link href='/basket'><p>Basket</p></Link>
         </div>
       </div>
     </div>

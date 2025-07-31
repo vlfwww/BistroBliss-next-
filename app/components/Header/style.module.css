@@ -74,7 +74,7 @@
         }
        }
     }
-    & .right{
+    & .right a{
         max-width: 147px;
         padding: 10px 20px;
         display: flex;
@@ -82,6 +82,7 @@
         color: rgba(24, 34, 38, 1);
         border: 2px solid rgba(44, 47, 36, 1);
         border-radius: 118px;
+        text-decoration: none;
         & p{
             font:700 16px "DM Sans";
         }
