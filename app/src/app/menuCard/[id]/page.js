@@ -17,19 +17,25 @@ export default function MenuCard() {
   const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToOrder = () => {
-    const stored = localStorage.getItem("basket");
-    let basket = stored ? JSON.parse(stored) : [];
-    const exists = basket.find(item => item.id === product.id); // Убедитесь, что сравнение корректное
+  const stored = localStorage.getItem("basket");
+  let basket = stored ? JSON.parse(stored) : [];
+  const exists = basket.find(item => item.id === product.id);
 
-    if (!exists) {
-      basket.push({ id: product.id, name: product.name });
-      localStorage.setItem("basket", JSON.stringify(basket));
-      setIsAdded(true);
-      console.log("Товар добавлен в корзину:", basket); // Отладка
-    } else {
-      console.log("Товар уже в корзине:", basket); // Отладка
-    }
-  };
+  if (!exists) {
+    basket.push({
+      id: product.id,
+      name: product.name,
+      img: product.img, 
+      price: product.price,
+      description: product.description,
+    });
+    localStorage.setItem("basket", JSON.stringify(basket));
+    setIsAdded(true);
+    console.log("Товар добавлен в корзину:", basket);
+  } else {
+    console.log("Товар уже в корзине:", basket);
+  }
+};
 
   return (
     <div className={style.wrapper}>

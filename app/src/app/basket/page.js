@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import style from "./style.module.css";
+import MenuItem from "../../../components/MenuItem";
 
 function Basket() {
   const [items, setItems] = useState([]);
@@ -23,23 +24,40 @@ function Basket() {
     setItems(items.filter((item) => item.id !== id));
   };
 
+  const clearBasket = () => {
+    setItems([]);
+    localStorage.removeItem("basket"); // Очищаем localStorage
+  };
+
   return (
     <div className={style.wrapper}>
       <div className={style.text}>
-        <p className={style.title}>Корзина</p>
+        <p className={style.title}>Basket</p>
       </div>
       <div className={style.basketContent}>
         {items.length === 0 ? (
-          <p>Ваша корзина пуста.</p>
+          <p>The basket is empty.</p>
         ) : (
-          <ul>
-            {items.map((item) => (
-              <li key={item.id}>
-                {item.name}{" "}
-                <button onClick={() => removeItem(item.id)}>Удалить</button>
-              </li>
-            ))}
-          </ul>
+          <>
+            <div className={style.basketWrapper}>
+              {items.map((item) => (
+                <div key={item.id} className={style.basketItem}>
+                  <MenuItem
+                    name={item.name}
+                    img={item.img}
+                    price={item.price}
+                    description={item.description}
+                  />
+                  <button onClick={() => removeItem(item.id)} className={style.deleteButton}>
+                    Delete
+                  </button>
+                </div>
+              ))}
+            </div>
+            <button className={style.clear} onClick={clearBasket}>
+              Clear Basket
+            </button>
+          </>
         )}
       </div>
     </div>
